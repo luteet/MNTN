@@ -1,0 +1,133 @@
+.content-item {
+    padding: 10vw 0 10vw 0;
+    @include _992 {
+        padding: 10vw 75px 10vw 0;
+    }
+    @include _769 {
+        padding: 100px 0 100px 0;
+    }
+
+    position: relative;
+
+    &__container {
+        flex-direction: column-reverse;
+        @include _769 {
+            flex-direction: row-reverse;
+        }
+        
+    }
+    
+    &__1 {
+        margin: 5% 0 0 0;
+        @include _992 {
+            margin: 0% 0 0 0;
+        }
+    }
+    &:nth-child(2n) &__container {
+        @include _769 {
+            flex-direction: row;
+        }
+    }
+    &:nth-child(2n) &__info {
+        
+        
+        @media(min-width: $container+px) {
+            margin: 0 114px 0 150px;
+        }
+        @include _769 {
+            margin: 0 7vw 0 7vw;
+        }
+        
+    }
+    &:nth-child(-n+10) &__info::before {
+        content: '0'counter(section);
+    }
+    &__image {
+        &-img {
+            width: 100%;
+            @media(min-width: $container+px) {
+                width: auto;
+            }
+            @include _769 {
+                width: 40vw;
+            }
+        }
+        
+    }
+    &__info {
+        position: relative;
+        
+        margin: 10vw 0 0 0;
+
+        @media(min-width: $container+px) {
+            margin: 0 0 0 264px;
+        }
+        @include _769 {
+            margin: 0 0 0 10vw;
+        }
+        
+        &::before {
+            counter-increment: section;
+
+            content: counter(section);
+
+            position: absolute;
+            left: 0; top: 0;
+            transform: translate(0%, 0);
+            @include _769 {
+                transform: translate(-50%, 0);
+            }
+
+            font-size: 15vw;
+            font-weight: 700;
+
+            @media(min-width: $container+px) {
+                font-size: 200px;
+            }
+
+            opacity: .1;
+        }
+        
+    }
+    &__text {
+        font-size: 1.1rem;
+        line-height: 175%;
+
+        @media(min-width: $container+px) {
+            font-size: 1.3rem;
+        }
+
+        margin: 5vw 0 3vw;
+        @include _769 {
+            margin: 35px 0 15px;
+        }
+
+        
+    }
+    &__btn-more {
+        display: inline-flex;
+        align-items: center;
+        
+        margin: 15px 0;
+
+        color: var(--accent);
+
+        @include _992 {
+            &:hover &--icon {
+                margin: 0 0 0 25px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &--icon {
+            display: inline-block;
+
+            margin: 0 0 0 15px;
+            
+            transition: all .2s ease-in-out;
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+$main_font: 'Gilroy';
+$font: 'Chronicle Display';
+
+$container: 1492;
+$containerMin: 1000;
+$containerLarge: 1790;
+
+$accent: #FBD784;
+
+:root {
+    --accent: #FBD784;
+    --bg: #0B1D26;
+    --text: #FFFFFF;
+    --text-2: #000000;
+}
+
+@font-face {
+
+    @include font-include('Chronicle Display', 900, swap, normal, 'Chronicle Display Black');
+
+}
+
+@font-face {
+
+    @include font-include('Chronicle Display', 600, swap, normal, 'Chronicle Display Semibold');
+    
+}
+
+@font-face {
+
+    @include font-include('Gilroy', 700, swap, normal, 'Gilroy-Bold');
+    
+}
+
+@font-face {
+
+    @include font-include('Gilroy', 900, swap, normal, 'Gilroy-ExtraBold');
+    
+}
+
+@font-face {
+
+    @include font-include('Gilroy', 500, swap, normal, 'Gilroy-Medium');
+    
+}
+

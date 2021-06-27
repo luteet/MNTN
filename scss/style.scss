@@ -1,0 +1,16 @@
+@import 'mixin.scss';
+@import 'null.scss';
+@import 'libs.scss';
+@import 'vars.scss';
+@import 'global.scss';
+@import 'font-styles';
+@import 'animation';
+@import 'section-counter';
+
+@import 'main-sections/header';
+
+@import 'sections/intro';
+@import 'sections/content';
+
+
+@import 'main-sections/footer';

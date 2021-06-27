@@ -1,0 +1,63 @@
+
+body {
+
+    font-family: $main_font;
+    
+    font-weight: 400;
+    line-height: 150%;
+    
+    font-size: 16px;
+    
+    background-color: var(--bg);
+    color: var(--text);
+
+    counter-reset: section;
+
+    &._popup-active {
+        overflow: hidden;
+    }
+    
+}
+
+a {
+    color: var(--color);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+._flex-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper {
+    overflow: hidden;
+    
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: #{$container}px;
+    &._min {
+        max-width: #{$containerMin}px;
+    }
+    &._large {
+        max-width: #{$containerLarge}px;
+    }
+}
+
+.section-padding {
+    padding: 75px 0px;
+
+    @include _992 {
+        padding: 150px 0px;
+    }
+
+    @include _769 {
+        padding: 100px 0px;
+    }
+
+}

@@ -1,0 +1,71 @@
+.wow {
+    //opacity: 0;
+    
+    transition: all .3s ease-in-out;
+}
+.anim-fade-in {
+    opacity: 0;
+    animation: anim-fade-in 0.3s ease-in-out 0s 1 normal forwards;
+}
+.anim-zoom-out {
+    transform: scale(1.05) translate(0%, -5%);
+    animation: anim-zoom-out 0.5s ease-in-out 0.2s 1 normal forwards;
+}
+.anim-zoom-out-min {
+    transform: scale(1.3) translate(0%, -5%);
+    animation: anim-zoom-out-min 0.5s ease-in-out 0.2s 1 normal forwards;
+}
+.animated {
+    //opacity: 1;
+}
+._check-load {
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    &.loaded {
+        opacity: 1;
+    }
+}
+@keyframes anim-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes anim-zoom-out {
+    from {
+        transform: scale(1.05) translate(0% -5%);
+    }
+    to {
+        transform: scale(1) translate(0%, 0%);
+    }
+}
+@keyframes anim-zoom-out-min {
+    from {
+        transform: scale(1.3) translate(0% -5%);
+    }
+    to {
+        transform: scale(1) translate(0%, 0%);
+    }
+}
+@keyframes anim-to-up {
+    from {
+
+        transform: translate(0, 10%);
+    }
+    to {
+        transform: translate(0, 0%);
+        opacity: 1;
+    }
+}
+@keyframes anim-to-down {
+    from {
+        opacity: 0;
+        transform: translate(0, -10%);
+    }
+    to {
+        transform: translate(0, 0%);
+        opacity: 1;
+    }
+}
