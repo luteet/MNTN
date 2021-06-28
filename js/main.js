@@ -134,6 +134,16 @@ $(function() {
 
     let sectionCounter = $('.section'), sectionCounterCheck, sectionCounterCheckFuncIf;
 
+        function sectionCounterPos() {
+            let sectionCounterPos = header.offset().top / ($(window).height() / 2) * 100;
+
+            if(sectionCounterPos <= 100) {
+                $('.section-counter').css('transform', `translate(0,-${sectionCounterPos}%`)
+            } else {
+                $('.section-counter').css('transform', `translate(0,-100%`)
+            }
+        }
+
         function sectionCounterCheckFunc(arg) {
             
             for(let i = 0; i >= sectionCounterCheck.length; i++) {
@@ -145,13 +155,7 @@ $(function() {
         
         function windowScroll() {
 
-            let sectionCounterPos = header.offset().top / ($(window).height() / 2) * 100;
-
-            if(sectionCounterPos <= 100) {
-                $('.section-counter').css('transform', `translate(0,-${sectionCounterPos}%`)
-            } else {
-                $('.section-counter').css('transform', `translate(0,-100%`)
-            }
+            sectionCounterPos();
 
             if(windowSize() >= 992) {
                 for(let i = sectionCounter.length - 1; i >= 0; i--) {
@@ -175,7 +179,7 @@ $(function() {
             
 
         }
-    
+        windowScroll();
         $(window).scroll(function() {
             windowScroll();
         });

@@ -9,6 +9,11 @@
     @include _992 {
         display: block;
     }
+
+    @media(max-height: 800px) {
+        transform: translate(0, 0px) !important;
+    }
+
     &__list {
         border-right: 3px solid rgba(#FFFFFF, 0.3);
         
