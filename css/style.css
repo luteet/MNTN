@@ -746,6 +746,7 @@ a:hover {
   top: 50%;
   z-index: 10;
   display: none;
+  opacity: 0;
 }
 
 .section-counter__list {
@@ -1471,7 +1472,7 @@ a:hover {
 
 @media (min-width: 1492px) {
   .title {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .content-item:nth-child(2n) .content-item__info {
@@ -1483,7 +1484,7 @@ a:hover {
   }
 
   .content-item__info {
-    margin: 0 0 0 264px;
+    margin: 0 0 0 230px;
   }
 
   .content-item__info::before {
